@@ -1,0 +1,218 @@
+[
+  {
+    "image": "/images/app-image-1.jpg",
+    "title": "Forest: Focus For Productivity",
+    "companyName": "Forest Corp.",
+    "id": 1,
+    "description": "Stay focused and present. Plant a virtual tree when you start working. If you leave the app, the tree will die. Achieve your goals with deep concentration.",
+    "size": 75,
+    "reviews": 12000,
+    "ratingAvg": 4.5,
+    "downloads": 9000000,
+    "ratings": [
+      { "name": "1 star", "count": 100 },
+      { "name": "2 star", "count": 200 },
+      { "name": "3 star", "count": 1700 },
+      { "name": "4 star", "count": 4000 },
+      { "name": "5 star", "count": 6000 }
+    ]
+  },
+  {
+    "image": "/images/app-image-2.jpg",
+    "title": "SmPlan: ToDo List With Reminder",
+    "companyName": "SmPlan Labs",
+    "id": 2,
+    "description": "A comprehensive to-do list and task management app that keeps you organized and ensures you never miss a deadline with smart reminders.",
+    "size": 45,
+    "reviews": 8500,
+    "ratingAvg": 4.3,
+    "downloads": 5000000,
+    "ratings": [
+      { "name": "1 star", "count": 150 },
+      { "name": "2 star", "count": 250 },
+      { "name": "3 star", "count": 1500 },
+      { "name": "4 star", "count": 3500 },
+      { "name": "5 star", "count": 3100 }
+    ]
+  },
+  {
+    "image": "/images/app-image-3.jpg",
+    "title": "FLIP - Focus Timer For Study",
+    "companyName": "FLIP Dev",
+    "id": 3,
+    "description": "The ultimate study timer that helps students track and manage their study sessions with an intuitive flipping mechanism.",
+    "size": 30,
+    "reviews": 15000,
+    "ratingAvg": 4.7,
+    "downloads": 10000000,
+    "ratings": [
+      { "name": "1 star", "count": 50 },
+      { "name": "2 star", "count": 100 },
+      { "name": "3 star", "count": 1500 },
+      { "name": "4 star", "count": 5500 },
+      { "name": "5 star", "count": 7850 }
+    ]
+  },
+  {
+    "image": "/images/app-image-4.jpg",
+    "title": "Pomocat - Cute Pomodoro Timer",
+    "companyName": "Pomocat Studios",
+    "id": 4,
+    "description": "A delightful Pomodoro timer with adorable cat themes to make your work intervals fun and motivating.",
+    "size": 60,
+    "reviews": 9200,
+    "ratingAvg": 4.6,
+    "downloads": 7500000,
+    "ratings": [
+      { "name": "1 star", "count": 80 },
+      { "name": "2 star", "count": 120 },
+      { "name": "3 star", "count": 1000 },
+      { "name": "4 star", "count": 4000 },
+      { "name": "5 star", "count": 4000 }
+    ]
+  },
+  {
+    "image": "/images/app-image-5.jpg",
+    "title": "Time Planner: Schedule & Tasks",
+    "companyName": "Planner Tools",
+    "id": 5,
+    "description": "An all-in-one app for planning your day, scheduling tasks, and managing your calendar efficiently.",
+    "size": 90,
+    "reviews": 11000,
+    "ratingAvg": 4.4,
+    "downloads": 6500000,
+    "ratings": [
+      { "name": "1 star", "count": 110 },
+      { "name": "2 star", "count": 190 },
+      { "name": "3 star", "count": 1800 },
+      { "name": "4 star", "count": 4500 },
+      { "name": "5 star", "count": 4400 }
+    ]
+  },
+  {
+    "image": "/images/app-image-6.jpg",
+    "title": "Morning Habits - Daily Routine",
+    "companyName": "Habit Builders",
+    "id": 6,
+    "description": "Establish powerful morning routines and track your daily habits to achieve personal growth and success.",
+    "size": 55,
+    "reviews": 7800,
+    "ratingAvg": 4.2,
+    "downloads": 4800000,
+    "ratings": [
+      { "name": "1 star", "count": 200 },
+      { "name": "2 star", "count": 300 },
+      { "name": "3 star", "count": 1500 },
+      { "name": "4 star", "count": 3000 },
+      { "name": "5 star", "count": 2800 }
+    ]
+  },
+  {
+    "image": "/images/app-image-7.jpg",
+    "title": "Focus Plant: Pomodoro Forest",
+    "companyName": "Focus Tree Games",
+    "id": 7,
+    "description": "Gamified focus timer where you grow a forest by staying productive. A unique take on the Pomodoro technique.",
+    "size": 80,
+    "reviews": 13500,
+    "ratingAvg": 4.8,
+    "downloads": 9500000,
+    "ratings": [
+      { "name": "1 star", "count": 50 },
+      { "name": "2 star", "count": 50 },
+      { "name": "3 star", "count": 500 },
+      { "name": "4 star", "count": 4000 },
+      { "name": "5 star", "count": 8900 }
+    ]
+  },
+  {
+    "image": "/images/app-image-8.jpg",
+    "title": "Alarmy - Alarm Clock & Sleep",
+    "companyName": "Delight Labs",
+    "id": 8,
+    "description": "The world's most annoying (but effective) alarm clock. Wake up easily with mandatory missions and sleep tracking.",
+    "size": 100,
+    "reviews": 20000,
+    "ratingAvg": 4.1,
+    "downloads": 12000000,
+    "ratings": [
+      { "name": "1 star", "count": 500 },
+      { "name": "2 star", "count": 700 },
+      { "name": "3 star", "count": 2000 },
+      { "name": "4 star", "count": 5000 },
+      { "name": "5 star", "count": 6800 }
+    ]
+  },
+  {
+    "image": "/images/app-image-9.jpg",
+    "title": "Mindful Meditation Guide",
+    "companyName": "Zen App",
+    "id": 9,
+    "description": "Daily guided meditations to reduce stress, improve sleep, and increase focus. Perfect for beginners and advanced users.",
+    "size": 150,
+    "reviews": 18000,
+    "ratingAvg": 4.9,
+    "downloads": 15000000,
+    "ratings": [
+      { "name": "1 star", "count": 20 },
+      { "name": "2 star", "count": 30 },
+      { "name": "3 star", "count": 100 },
+      { "name": "4 star", "count": 2000 },
+      { "name": "5 star", "count": 15850 }
+    ]
+  },
+  {
+    "image": "/images/app-image-10.jpg",
+    "title": "MealPrep: Healthy Eating",
+    "companyName": "Kitchen Labs",
+    "id": 10,
+    "description": "Your personal meal planning assistant. Easily create weekly meal plans, grocery lists, and track your nutrition.",
+    "size": 95,
+    "reviews": 6000,
+    "ratingAvg": 4.0,
+    "downloads": 3500000,
+    "ratings": [
+      { "name": "1 star", "count": 300 },
+      { "name": "2 star", "count": 400 },
+      { "name": "3 star", "count": 1800 },
+      { "name": "4 star", "count": 2000 },
+      { "name": "5 star", "count": 1500 }
+    ]
+  },
+  {
+    "image": "/images/app-image-11.jpg",
+    "title": "CodeMentor: Learn Programming",
+    "companyName": "DevAcademy",
+    "id": 11,
+    "description": "Interactive lessons and coding challenges for popular programming languages right on your phone.",
+    "size": 120,
+    "reviews": 14000,
+    "ratingAvg": 4.6,
+    "downloads": 8000000,
+    "ratings": [
+      { "name": "1 star", "count": 70 },
+      { "name": "2 star", "count": 130 },
+      { "name": "3 star", "count": 1500 },
+      { "name": "4 star", "count": 5000 },
+      { "name": "5 star", "count": 7300 }
+    ]
+  },
+  {
+    "image": "/images/app-image-12.jpg",
+    "title": "BudgetBoss: Expense Tracker",
+    "companyName": "Finance Flow",
+    "id": 12,
+    "description": "Track your spending, manage budgets, and save money with simple, intuitive expense tracking.",
+    "size": 40,
+    "reviews": 10500,
+    "ratingAvg": 4.5,
+    "downloads": 7000000,
+    "ratings": [
+      { "name": "1 star", "count": 100 },
+      { "name": "2 star", "count": 150 },
+      { "name": "3 star", "count": 1200 },
+      { "name": "4 star", "count": 4000 },
+      { "name": "5 star", "count": 5050 }
+    ]
+  }
+]
