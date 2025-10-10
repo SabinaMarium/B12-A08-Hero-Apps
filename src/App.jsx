@@ -19,7 +19,7 @@ function App() {
             <Route path="/apps" element={<AllApps />} />
             <Route path="/app/:id" element={<AppDetails />} />
             <Route path="/installation" element={<Installation />} />
-            {/* Catch-all route for 404 */}
+            
             <Route path="*" element={<ErrorPage />} />
           </Routes>
         </main>
