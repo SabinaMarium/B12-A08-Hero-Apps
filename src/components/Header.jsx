@@ -80,3 +80,47 @@ const Header = () => {
 };
 
 export default Header;
+
+Icons.jsx:
+import React from 'react';
+
+// --- Star Icon (Used for Ratings) ---
+export const StarIcon = ({ className = "w-5 h-5" }) => (
+    <svg 
+        xmlns="http://www.w3.org/2000/svg" 
+        viewBox="0 0 24 24" 
+        fill="currentColor" 
+        className={className}
+    >
+        <path fillRule="evenodd" d="M10.788 3.212a.75.75 0 0 1 1.424 0l1.886 3.771 4.167.606a.75.75 0 0 1 .417 1.279l-3.018 2.946.713 4.156a.75.75 0 0 1-1.088.791L12 18.257l-3.729 1.956a.75.75 0 0 1-1.088-.791l.713-4.156-3.018-2.946a.75.75 0 0 1 .417-1.28l4.167-.605L10.788 3.212Z" clipRule="evenodd" />
+    </svg>
+);
+
+// --- Download Icon (Used for Download Counts) ---
+export const DownloadIcon = ({ className = "w-5 h-5" }) => (
+    <svg 
+        xmlns="http://www.w3.org/2000/svg" 
+        fill="none" 
+        viewBox="0 0 24 24" 
+        strokeWidth={1.5} 
+        stroke="currentColor" 
+        className={className}
+    >
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+    </svg>
+);
+
+// --- Installation Icon (Likely needed for the Installation page/button) ---
+export const InstallationIcon = ({ className = "w-5 h-5" }) => (
+    <svg 
+        xmlns="http://www.w3.org/2000/svg" 
+        fill="none" 
+        viewBox="0 0 24 24" 
+        strokeWidth={1.5} 
+        stroke="currentColor" 
+        className={className}
+    >
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125l6.591 6.591a2.25 2.25 0 0 0 3.182 0l6.591-6.591M3 13.125l6.591 6.591a2.25 2.25 0 0 0 3.182 0l6.591-6.591m-14.773 0a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-.75.75h-14.5a.75.75 0 0 1-.75-.75v-1.5Zm12.773 0h-12.5a.75.75 0 0 1-.75-.75v-1.5a.75.75 0 0 1 .75-.75h12.5a.75.75 0 0 1 .75.75v1.5a.75.75 0 0 1-.75.75Z" />
+    </svg>
+);
+

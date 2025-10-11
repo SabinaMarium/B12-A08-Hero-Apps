@@ -17,7 +17,6 @@ const StateCard = ({ data }) => {
   const isPositive = data.sub.includes("More");
   const subColor = isPositive ? 'text-green-300' : 'text-red-300';
 
-
   return (
     <div className={`p-6 rounded-xl shadow-lg ${bgColor} text-white transition duration-300 transform hover:scale-[1.02]`}>
       <div className="flex justify-between items-start mb-4">
@@ -54,3 +53,6 @@ const StateCard = ({ data }) => {
 };
 
 export default StateCard;
+
+
+
