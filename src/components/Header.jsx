@@ -1,51 +1,38 @@
 import React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
+import { FaGithub } from "react-icons/fa";
 
-const Header = () => {
+
+export default function Header(){
   const navigate = useNavigate();
-
-  const navLinks = [
-    { name: "Home", path: "/" },
-    { name: "Apps", path: "/apps" },
-    { name: "Installation", path: "/installation" },
-  ];
-
   return (
-    <header className="bg-white shadow-md sticky top-0 z-50">
-      <div className="container mx-auto flex justify-between items-center py-4 px-6">
-        <div
-          className="text-2xl font-bold text-indigo-600 cursor-pointer"
-          onClick={() => navigate("/")}
-        >
-          HeroApps
+    <header className="bg-white shadow sticky top-0 z-40">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-between h-16">
+          <button onClick={()=>navigate("/")} className="flex items-center gap-3">
+            <img src="/assets/logo.png" alt="Hero.IO" className="w-8 h-8"/>
+            <span className="font-semibold text-indigo-600">HERO.IO</span>
+          </button>
+
+          <nav className="hidden md:flex gap-8 items-center">
+            <NavLink to="/" end className={({isActive}) => isActive ? "text-indigo-600 font-semibold" : "text-slate-700"}>Home</NavLink>
+            <NavLink to="/apps" className={({isActive}) => isActive ? "text-indigo-600 font-semibold" : "text-slate-700"}>Apps</NavLink>
+            <NavLink to="/installation" className={({isActive}) => isActive ? "text-indigo-600 font-semibold" : "text-slate-700"}>Installation</NavLink>
+          </nav>
+
+          <div className="flex items-center">
+            <a
+  href="https://github.com/SabinaMarium"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="flex items-center gap-2 bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition"
+>
+  <FaGithub size={20} />
+  Contribute
+</a>
+          </div>
         </div>
-
-        <nav className="flex gap-6">
-          {navLinks.map((link) => (
-            <NavLink
-              key={link.name}
-              to={link.path}
-              className={({ isActive }) =>
-                `text-gray-700 font-medium hover:text-indigo-600 transition ${
-                  isActive ? "text-indigo-600 underline" : ""
-                }`
-              }
-            >
-              {link.name}
-            </NavLink>
-          ))}
-        </nav>
-
-        <a
-          href="https://github.com/SabinMarium"
-          target="_blank"
-          className="bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-700 transition"
-        >
-          Contribute
-        </a>
       </div>
     </header>
   );
-};
-
-export default Header;
+}

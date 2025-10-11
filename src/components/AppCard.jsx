@@ -1,24 +1,16 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const AppCard = ({ app, onClick }) => {
+export default function AppCard({ app }){
   return (
-    <div
-      onClick={onClick}
-      className="bg-white rounded-2xl shadow hover:shadow-lg cursor-pointer transition p-4"
-    >
-      <img
-        src={app.image}
-        alt={app.title}
-        className="w-full h-40 object-cover rounded-xl mb-4"
-      />
-      <h3 className="font-semibold text-lg mb-1">{app.title}</h3>
-      <p className="text-sm text-gray-600">{app.companyName}</p>
-      <div className="flex justify-between text-sm mt-2 text-gray-500">
-        <span>⬇ {app.downloads.toLocaleString()}</span>
-        <span>⭐ {app.ratingAvg}</span>
+    <Link to={`/apps/${app.id}`} className="bg-white rounded-2xl shadow p-4 block hover:shadow-lg transition">
+      <img src={app.image} alt={app.title} className="w-full h-40 object-cover rounded-lg mb-3"/>
+      <div className="font-semibold">{app.title}</div>
+      <div className="text-sm text-slate-500">{app.companyName}</div>
+      <div className="mt-2 flex justify-between text-sm">
+        <div className="text-green-600">⬇ {Math.round(app.downloads/1000000)}M</div>
+        <div className="bg-amber-100 px-2 py-1 rounded">⭐ {app.ratingAvg}</div>
       </div>
-    </div>
+    </Link>
   );
-};
-
-export default AppCard;
+}

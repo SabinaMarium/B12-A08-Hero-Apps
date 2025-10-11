@@ -1,73 +1,67 @@
-import React, { useState } from "react";
-import { useParams } from "react-router-dom";
+import React, { useEffect, useMemo, useState } from "react";
+import { useParams, Link } from "react-router-dom";
 import appData from "./appData";
-import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer } from "recharts";
+import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip } from "recharts";
 import Toast from "./Toast";
 
-const AppDetails = () => {
+export default function AppDetails(){
   const { id } = useParams();
-  const app = appData.find((a) => a.id === parseInt(id));
+  const app = useMemo(()=> appData.find(a=> String(a.id) === String(id)), [id]);
   const [installed, setInstalled] = useState(false);
   const [showToast, setShowToast] = useState(false);
 
-  if (!app) {
-    return <p className="text-center text-gray-500 mt-10">App Not Found 😕</p>;
-  }
+  useEffect(()=> { setInstalled(false); setShowToast(false); }, [id]);
 
-  const handleInstall = () => {
+  if(!app) return (
+    <div className="py-24 text-center">
+      <h2 className="text-2xl font-semibold">App Not Found</h2>
+      <p className="mt-3 text-slate-500">We couldn't find that app. <Link to="/apps" className="text-indigo-600">Back to apps</Link></p>
+    </div>
+  );
+
+  const chartData = app.ratings.map(r => ({ name: r.name.replace(' star',''), count: r.count }));
+
+  function handleInstall(){
     setInstalled(true);
     setShowToast(true);
-    setTimeout(() => setShowToast(false), 2500);
-  };
+    setTimeout(()=> setShowToast(false), 2500);
+  }
 
   return (
-    <div className="max-w-5xl mx-auto">
-      <div className="flex flex-col md:flex-row gap-8 items-center mb-10">
-        <img
-          src={app.image}
-          alt={app.title}
-          className="w-60 h-60 object-cover rounded-2xl shadow"
-        />
-        <div>
-          <h1 className="text-3xl font-bold mb-2">{app.title}</h1>
-          <p className="text-gray-500 mb-2">{app.companyName}</p>
-          <p className="text-gray-700 mb-2">⭐ {app.ratingAvg} | {app.reviews} reviews</p>
-          <p className="text-gray-700 mb-2">⬇ {app.downloads.toLocaleString()} downloads</p>
-
-          <button
-            onClick={handleInstall}
-            disabled={installed}
-            className={`px-6 py-2 mt-3 rounded-lg text-white ${
-              installed ? "bg-gray-400 cursor-not-allowed" : "bg-indigo-600 hover:bg-indigo-700"
-            }`}
-          >
-            {installed ? "Installed" : "Install"}
+    <div className="max-w-6xl mx-auto px-6 py-12">
+      <div className="flex flex-col md:flex-row gap-8">
+        <div className="md:w-1/3 bg-white rounded-2xl p-6 shadow">
+          <img src={app.image} alt={app.title} className="w-full h-64 object-cover rounded-lg mb-4"/>
+          <div className="font-bold text-lg">{app.title}</div>
+          <div className="text-sm text-slate-500">{app.companyName}</div>
+          <div className="mt-4 flex gap-3">
+            <div className="px-3 py-2 bg-emerald-50 rounded text-sm">Downloads: {app.downloads.toLocaleString()}</div>
+            <div className="px-3 py-2 bg-amber-50 rounded text-sm">⭐ {app.ratingAvg}</div>
+          </div>
+          <button onClick={handleInstall} disabled={installed} className={`mt-6 w-full px-4 py-2 rounded ${installed ? 'bg-slate-300' : 'bg-indigo-600 text-white hover:bg-indigo-700'}`}>
+            {installed ? 'Installed' : 'Install'}
           </button>
+        </div>
+
+        <div className="flex-1 bg-white rounded-2xl p-6 shadow">
+          <h3 className="text-xl font-semibold mb-4">App Reviews</h3>
+          <div style={{height: 240}}>
+            <ResponsiveContainer width="100%" height="100%">
+              <BarChart data={chartData} layout="vertical" margin={{top:5,right:20,left:20,bottom:5}}>
+                <XAxis type="number" />
+                <YAxis type="category" dataKey="name" />
+                <Tooltip />
+                <Bar dataKey="count" fill="#6C46F2" />
+              </BarChart>
+            </ResponsiveContainer>
+          </div>
+
+          <h3 className="text-xl font-semibold mt-6">Description</h3>
+          <p className="mt-2 text-slate-600">{app.description}</p>
         </div>
       </div>
 
-      {/* Chart */}
-      <div className="bg-white p-6 rounded-2xl shadow mb-10">
-        <h2 className="text-xl font-semibold mb-4">User Ratings</h2>
-        <ResponsiveContainer width="100%" height={250}>
-          <BarChart data={app.ratings}>
-            <XAxis dataKey="name" />
-            <YAxis />
-            <Tooltip />
-            <Bar dataKey="count" fill="#6366f1" radius={[6, 6, 0, 0]} />
-          </BarChart>
-        </ResponsiveContainer>
-      </div>
-
-      {/* Description */}
-      <div className="bg-white p-6 rounded-2xl shadow">
-        <h2 className="text-xl font-semibold mb-3">About this App</h2>
-        <p className="text-gray-700">{app.description}</p>
-      </div>
-
-      {showToast && <Toast message="App Installed Successfully ✅" />}
+      {showToast && <Toast message="Installed successfully 🎉" />}
     </div>
   );
-};
-
-export default AppDetails;
+}
