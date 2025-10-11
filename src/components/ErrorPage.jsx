@@ -1,24 +1,23 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const ErrorPage = () => {
+  const navigate = useNavigate();
+
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gray-50 text-center px-4">
-      {/* Image: Error 404 illustration from Screenshot 2025-10-10 144915.png */}
-       
-
-[Image of 404 page not found illustration]
-
-      
-      <h1 className="text-6xl font-extrabold text-gray-800 mt-8 mb-4">Error-404</h1>
-      <h2 className="text-3xl font-semibold text-gray-700">Oops, page not found!</h2>
-      <p className="text-lg text-gray-500 mt-2 mb-8">The page you are looking for is not available.</p>
-      <Link 
-        to="/" 
-        className="px-8 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition duration-300 font-semibold"
+    <div className="flex flex-col items-center justify-center h-[70vh] text-center">
+      <h1 className="text-6xl font-extrabold text-indigo-600 mb-4">404</h1>
+      <p className="text-2xl font-semibold mb-2">Oops! Page Not Found</p>
+      <p className="text-gray-600 mb-6 max-w-md">
+        The page you are looking for might have been removed or is temporarily
+        unavailable.
+      </p>
+      <button
+        onClick={() => navigate("/")}
+        className="bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition"
       >
-        Go Back!
-      </Link>
+        Go Home
+      </button>
     </div>
   );
 };

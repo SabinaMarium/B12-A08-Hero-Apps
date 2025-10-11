@@ -3,4 +3,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+html, body, #root { height: 100%; }
+body { @apply bg-gray-50 text-slate-800; }
 
+
+
+.spinner { @apply animate-spin rounded-full h-6 w-6 border-4 border-t-transparent border-slate-300; }

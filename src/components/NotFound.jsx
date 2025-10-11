@@ -1,23 +1,13 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-
-const NotFound = ({ title, message, image }) => {
-  return (
-    <div className="flex flex-col items-center justify-center py-20 bg-white rounded-lg">
-      <div className="w-64 h-64 mb-6">
-        {/* Placeholder for Grumpy Cat or other relevant image */}
-         
-      </div>
-      <h2 className="text-4xl font-bold text-gray-800 mb-3">{title}</h2>
-      <p className="text-lg text-gray-600 max-w-lg text-center mb-8">{message}</p>
-      <Link 
-        to="/apps" 
-        className="px-8 py-3 bg-purple-600 text-white rounded-lg hover:bg-purple-700 transition duration-300 font-semibold"
-      >
-        Go Back!
-      </Link>
-    </div>
-  );
-};
-
-export default NotFound;
+import React from 'react'
+import { Link } from 'react-router-dom'
+export default function NotFound(){
+return (
+<div className="py-24 text-center">
+<h2 className="text-4xl font-bold">404</h2>
+<p className="mt-4 text-slate-500">The page you're looking for does not exist.</p>
+<div className="mt-6">
+<Link to="/" className="px-4 py-2 bg-brand text-white rounded">Back Home</Link>
+</div>
+</div>
+)
+}
