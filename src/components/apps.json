@@ -1,48 +1,74 @@
 [
-"image": "/placeholder9.png",
-"title": "NoteIt - Simple Notes",
-"companyName": "Paperless",
-"description": "Quick notes and backups.",
-"size": 8,
-"reviews": 1500,
-"ratingAvg": 4.3,
-"downloads": 900000,
-"ratings": [ { "name": "1 star", "count": 40 }, { "name": "2 star", "count": 30 }, { "name": "3 star", "count": 60 }, { "name": "4 star", "count": 300 }, { "name": "5 star", "count": 1070 } ]
-},
-{
-"id": 10,
-"image": "/placeholder10.png",
-"title": "Focus Beam - Concentration Timer",
-"companyName": "BeamWorks",
-"description": "Advanced focus analytics and ambient sound.",
-"size": 14,
-"reviews": 2100,
-"ratingAvg": 4.6,
-"downloads": 1300000,
-"ratings": [ { "name": "1 star", "count": 60 }, { "name": "2 star", "count": 40 }, { "name": "3 star", "count": 100 }, { "name": "4 star", "count": 500 }, { "name": "5 star", "count": 1400 } ]
-},
-{
-"id": 11,
-"image": "/placeholder11.png",
-"title": "Tiny Tasks - Microlist",
-"companyName": "TinyApps",
-"description": "Micro-tasks for ADHD-friendly workflows.",
-"size": 6,
-"reviews": 900,
-"ratingAvg": 4.1,
-"downloads": 400000,
-"ratings": [ { "name": "1 star", "count": 30 }, { "name": "2 star", "count": 20 }, { "name": "3 star", "count": 70 }, { "name": "4 star", "count": 200 }, { "name": "5 star", "count": 580 } ]
-},
-{
-"id": 12,
-"image": "/placeholder12.png",
-"title": "DeepFocus - White Noise & Timer",
-"companyName": "Sonic Labs",
-"description": "White noise, timers and focus music.",
-"size": 30,
-"reviews": 3300,
-"ratingAvg": 4.5,
-"downloads": 2000000,
-"ratings": [ { "name": "1 star", "count": 150 }, { "name": "2 star", "count": 80 }, { "name": "3 star", "count": 200 }, { "name": "4 star", "count": 700 }, { "name": "5 star", "count": 2170 } ]
-}
+  {
+    "id": 9,
+    "image": "/placeholder9.png",
+    "title": "NoteIt - Simple Notes",
+    "companyName": "Paperless",
+    "description": "Quick notes and backups.",
+    "size": 8,
+    "reviews": 1500,
+    "ratingAvg": 4.3,
+    "downloads": 900000,
+    "ratings": [
+      { "name": "1 star", "count": 40 },
+      { "name": "2 star", "count": 30 },
+      { "name": "3 star", "count": 60 },
+      { "name": "4 star", "count": 300 },
+      { "name": "5 star", "count": 1070 }
+    ]
+  },
+  {
+    "id": 10,
+    "image": "/placeholder10.png",
+    "title": "Focus Beam - Concentration Timer",
+    "companyName": "BeamWorks",
+    "description": "Advanced focus analytics and ambient sound.",
+    "size": 14,
+    "reviews": 2100,
+    "ratingAvg": 4.6,
+    "downloads": 1300000,
+    "ratings": [
+      { "name": "1 star", "count": 60 },
+      { "name": "2 star", "count": 40 },
+      { "name": "3 star", "count": 100 },
+      { "name": "4 star", "count": 500 },
+      { "name": "5 star", "count": 1400 }
+    ]
+  },
+  {
+    "id": 11,
+    "image": "/placeholder11.png",
+    "title": "Tiny Tasks - Microlist",
+    "companyName": "TinyApps",
+    "description": "Micro-tasks for ADHD-friendly workflows.",
+    "size": 6,
+    "reviews": 900,
+    "ratingAvg": 4.1,
+    "downloads": 400000,
+    "ratings": [
+      { "name": "1 star", "count": 30 },
+      { "name": "2 star", "count": 20 },
+      { "name": "3 star", "count": 70 },
+      { "name": "4 star", "count": 200 },
+      { "name": "5 star", "count": 580 }
+    ]
+  },
+  {
+    "id": 12,
+    "image": "/placeholder12.png",
+    "title": "DeepFocus - White Noise & Timer",
+    "companyName": "Sonic Labs",
+    "description": "White noise, timers and focus music.",
+    "size": 30,
+    "reviews": 3300,
+    "ratingAvg": 4.5,
+    "downloads": 2000000,
+    "ratings": [
+      { "name": "1 star", "count": 150 },
+      { "name": "2 star", "count": 80 },
+      { "name": "3 star", "count": 200 },
+      { "name": "4 star", "count": 700 },
+      { "name": "5 star", "count": 2170 }
+    ]
+  }
 ]
